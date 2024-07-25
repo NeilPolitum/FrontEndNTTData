@@ -1,0 +1,60 @@
+<div class="container mt-4" *ngIf="data">
+    <h2 class="mb-4">Información Básica</h2>
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="firstName">Primer Nombre</label>
+                            <input type="text" class="form-control" id="firstName" [value]="data.firstName" readonly>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="middleName">Segundo Nombre</label>
+                            <input type="text" class="form-control" id="middleName" [value]="data.middleName" readonly>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="lastName">Primer Apellido</label>
+                            <input type="text" class="form-control" id="lastName" [value]="data.lastName" readonly>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="secondLastName">Segundo Apellido</label>
+                            <input type="text" class="form-control" id="secondLastName" [value]="data.secondLastName" readonly>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="text" class="form-control" id="phone" [value]="data.phone" readonly>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="address">Dirección</label>
+                            <input type="text" class="form-control" id="address" [value]="data.address" readonly>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="city">Ciudad</label>
+                            <input type="text" class="form-control" id="city" [value]="data.city" readonly>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <button class="btn btn-primary mt-3" (click)="volver()">Volver</button>
+</div>
+<div class="container mt-4" *ngIf="!data">
+    <div class="alert alert-warning" role="alert">
+        No se encontraron datos.
+    </div>
+    <button class="btn btn-primary mt-3" (click)="volver()">Volver</button>
+</div>

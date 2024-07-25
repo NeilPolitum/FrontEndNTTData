@@ -1,0 +1,27 @@
+div.container {
+    padding: 20px;
+    background-color: #D6E6ED;
+    border-radius: 10px;
+    max-width: 329px;
+    display: grid;
+}
+
+.mb-4 {
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.row {
+    gap: 20px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+.btn-primary {
+    margin: 0 auto;
+    width: 150px;
+    border-radius: 30px;
+    background-color: darkblue;
+}

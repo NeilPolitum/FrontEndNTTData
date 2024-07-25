@@ -1,0 +1,40 @@
+form.container {
+    padding: 20px;
+    background-color: #D6E6ED;
+    border-radius: 10px;
+    max-width: 329px;
+    display: grid;
+    grid-row-gap: 20px;
+}
+
+.text-muted {
+    font-size: 13px;
+    margin: 0;
+}
+
+.row {
+    gap: 20px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    color: darkblue;
+}
+
+.text-danger {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.btn-primary {
+    margin: 0 auto;
+    width: 150px;
+    border-radius: 30px;
+    background-color: darkblue;
+}
+
+.btn-primary:disabled {
+    border-color: #94999E;
+    background-color: #D9E1EC;
+    color: #94999E;
+}

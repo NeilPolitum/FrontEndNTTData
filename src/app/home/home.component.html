@@ -1,0 +1,24 @@
+<form class="container mt-4" #form="ngForm">
+    <p class="text-muted">Todos los campos son obligatorios.</p>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="tipoDocumento">Tipo de documento</label>
+                <select id="tipoDocumento" name="tipoDocumento" class="form-control" [(ngModel)]="selectedTipoDocumento" required>
+                    <option *ngFor="let tipo of tiposDocumento" [value]="tipo.id">{{ tipo.tipo }}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="numeroDocumento">Número de documento</label>
+                <input id="numeroDocumento" name="numeroDocumento" type="text" class="form-control" minlength="8" maxlength="11" pattern="^[0-9]*$" required [(ngModel)]="numeroDocumento" #numeroDocumentoCtrl="ngModel">
+                <div *ngIf="numeroDocumentoCtrl.invalid && (numeroDocumentoCtrl.dirty || numeroDocumentoCtrl.touched)" class="text-danger">
+                    <div *ngIf="numeroDocumentoCtrl.errors?.['minlength']">El número de documento debe tener al menos 8 caracteres.</div>
+                    <div *ngIf="numeroDocumentoCtrl.errors?.['pattern']">El número de documento solo puede contener números.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary mt-3" (click)="navigateToInfo()" [disabled]="!form.valid">Buscar</button>
+</form>
